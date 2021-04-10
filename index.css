@@ -1,5 +1,84 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
-h3{
+
+:root {
+    background-color: rgb(22, 7, 3);
+}
+
+h3 {
     font-family: Noto Sans JP;
     font-size: 78px;
+    font-weight: 200;
+    color: white;
+}
+
+.italicf {
+    font-style: italic;
+    font-size: 23px;
+    color: coral;
+}
+
+.pinot-noir>h3 {
+    font-family: Noto SansJP;
+    font-size: 48px;
+    color: white;
+}
+
+.pinot-noir>h4 {
+    font-size: 25px;
+    font-weight: 400;
+    color: white;
+}
+
+.riesling>h4 {
+    font-size: 25px;
+    font-weight: 400;
+    color: white;
+}
+
+.zifandel>h4 {
+    font-size: 25px;
+    font-weight: 400;
+    color: white;
+}
+
+.soave>h4 {
+    font-size: 25px;
+    font-weight: 400;
+    color: white;
+}
+
+.discover-wines {
+    font-family: Noto SansJP;
+    font-size: 60px;
+    font-weight: 700;
+    color: white;
+}
+
+.subtext {
+    font-family: Noto SansJP;
+    font-size: 20px;
+    color: white;
+}
+
+.georgian-wines>h3 {
+    font-family: Noto SansJP;
+    font-size: 48px;
+    color: white;
+}
+
+.transcarpathian-wines>h3 {
+    font-family: Noto SansJP;
+    font-size: 48px;
+    color: white;
+}
+
+b {
+    font-family: Noto SansJP;
+    font-size: 20px;
+    color: white;
+}
+
+button {
+    background-color: coral;
+    color: white;
 }
