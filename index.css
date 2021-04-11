@@ -1,84 +1,122 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
 
+/* 'Rubik', sans-serif; */
+/*'Prata', serif*/
+/*'Great Vibes', cursive*/
 :root {
     background-color: rgb(22, 7, 3);
+    scroll-behavior: smooth;
 }
 
-h3 {
-    font-family: Noto Sans JP;
-    font-size: 78px;
-    font-weight: 200;
-    color: white;
+body {
+    width: 980px
+}
+
+.container {
+    max-width: 980px;
+    width: 100%;
+}
+
+
+.body {
+    max-width: 980px;
+    margin: auto;
 }
 
 .italicf {
-    font-style: italic;
-    font-size: 23px;
-    color: coral;
-}
-
-.pinot-noir>h3 {
-    font-family: Noto SansJP;
-    font-size: 48px;
-    color: white;
-}
-
-.pinot-noir>h4 {
-    font-size: 25px;
+    font-family: 'Great Vibes', cursive;
+    color: rgb(200, 105, 58);
+    font-size: 14px;
     font-weight: 400;
-    color: white;
-}
-
-.riesling>h4 {
-    font-size: 25px;
-    font-weight: 400;
-    color: white;
-}
-
-.zifandel>h4 {
-    font-size: 25px;
-    font-weight: 400;
-    color: white;
-}
-
-.soave>h4 {
-    font-size: 25px;
-    font-weight: 400;
-    color: white;
+    text-align: center;
 }
 
 .discover-wines {
-    font-family: Noto SansJP;
-    font-size: 60px;
-    font-weight: 700;
+    font-family: 'Prata', serif;
+    font-size: 58px;
+    font-weight: 400;
     color: white;
+    text-align: center;
 }
 
 .subtext {
-    font-family: Noto SansJP;
-    font-size: 20px;
+    font-family: 'Rubik', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
     color: white;
 }
 
-.georgian-wines>h3 {
-    font-family: Noto SansJP;
-    font-size: 48px;
+.italian-wines h3,
+.georgian-wines h3,
+.transcarpathian-wines h3 {
+    font-family: 'Prata', serif;
+    font-size: 34px;
+    font-weight: 400;
     color: white;
+    text-align: center;
 }
 
-.transcarpathian-wines>h3 {
-    font-family: Noto SansJP;
-    font-size: 48px;
+.pinot-noir h4,
+.riesling h4,
+.zifandel h4,
+.soave h4 {
+    font-family: 'Rubik', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
     color: white;
+    text-align: center;
 }
 
-b {
-    font-family: Noto SansJP;
-    font-size: 20px;
+
+.menu-wines-shop {
+    display: block;
+    width: 980px;
+}
+
+.menu-wines-shop .button {
+    display: flex;
+    justify-content: space-around;
+}
+
+.price {
+    font-family: 'Rubik', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
     color: white;
+    text-align: center;
 }
 
 button {
-    background-color: coral;
+    font-family: 'Rubik', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
     color: white;
+    text-align: center;
+    background-color: rgb(200, 105, 58);
+
+}
+
+@media(min-width: 440px) {
+    .menu-wines-shop {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 5px;
+    }
+}
+
+@media(min-width: 660px) {
+    .menu-wines-shop {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+}
+
+@media(min-width: 980px) {
+    .menu-wines-shop {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
 }
