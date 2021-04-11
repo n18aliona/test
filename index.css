@@ -6,145 +6,90 @@
 /*'Prata', serif*/
 /*'Great Vibes', cursive*/
 :root {
-    background-color: black;
+    --main-color: #261e1c;
+    --orange-color: #c8693a;
     scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
 }
 
 body {
     max-width: 980px;
     margin: auto;
+    background-color: var(--main-color);
 }
 
-.container {
-    max-width: 980px;
-    width: 100%;
+
+.product-content img {
+    max-width: 200px;
+    max-height: 200px;
 }
 
-.ita-wine .photo-wine {
+.product-content section .card-text {
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-    flex-direction: row;
-    padding: 20;
-
-
-}
-
-@media(min-width: 980px) {
-    .photo-wine {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-
-}
-
-.italicf {
-    font-family: 'Great Vibes', cursive;
-    color: rgb(200, 105, 58);
-    font-size: 14px;
-    font-weight: 400;
-    text-align: center;
-}
-
-.discover-wines {
-    font-family: 'Prata', serif;
-    font-size: 58px;
-    font-weight: 400;
-    color: white;
-    text-align: center;
-}
-
-.subtext {
-    font-family: 'Rubik', sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    text-align: center;
-    color: white;
-}
-
-.italian-wines {
-    max-width: 980px;
+    flex-direction: column;
+    align-items: stretch;
+    box-shadow: 0 2px 4px 0 var(--orange-color);
+    transition: 0.3s;
     margin: auto;
+    max-width: 200px;
+    max-height: 200px;
 }
 
-.italian-wines h3,
-.georgian-wines h3,
-.transcarpathian-wines h3 {
-    font-family: 'Prata', serif;
-    font-size: 34px;
-    font-weight: 400;
-    color: white;
+
+.product-content:hover {
+    box-shadow: 0 4px 8px 0 var(--orange-color);
+
+}
+
+section .card-text {
     text-align: center;
 }
 
 
-
-.pinot-noir h4,
-.riesling h4,
-.zifandel h4,
-.soave h4 {
-    font-family: 'Rubik', sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    color: white;
-    text-align: center;
-}
-
-
-.menu-wines-shop {
-    display: block;
-    width: 980px;
-}
-
-.menu-wines-shop .button {
+.italian-wine,
+.georgian-wine,
+.tcp-wine {
     display: flex;
-    justify-content: space-around;
+    flex-direction: row;
+    margin: auto;
+    padding: 50px;
 }
 
-.price {
-    font-family: 'Rubik', sans-serif;
-    font-size: 18px;
-    font-weight: 700;
-    color: white;
+.shop-list {
+    background-color: var(--main-color);
+
+}
+
+
+/* Controls */
+
+.button {
+    padding: 0px;
+    margin: 0 0.3em 0.3em 0;
+    color: #FFFFFF;
+    text-decoration: none;
     text-align: center;
+    transition: color 0.7s;
+    background-color: var(--orange-color);
+    font-size: 10px;
 }
 
-button {
-    font-family: 'Rubik', sans-serif;
-    font-size: 15px;
-    font-weight: 400;
+.button:hover {
+    color: #000000;
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+
+.card-button {
+    border-color: black;
+    color: black;
+}
+
+.card-button:hover {
+    background-color: black;
     color: white;
-    text-align: center;
-    background-color: rgb(200, 105, 58);
-
-}
-
-@media(min-width: 440px) {
-    .menu-wines-shop {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 5px;
-    }
-}
-
-@media(min-width: 660px) {
-    .menu-wines-shop {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-
-}
-
-@media(min-width: 980px) {
-    .menu-wines-shop {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-
-}
-
-grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-
-}
-}
-}
 }
