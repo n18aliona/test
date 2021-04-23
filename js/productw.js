@@ -1,50 +1,67 @@
-const productsWine =
+const productsJson =
     `[
     {
-        "id" : "1",
-        "image" : "pinot-noir.jpg",
-        "href" :  "pinot.html"
-        "title" : "Pinot Noir",
-        "price" : "$12,00USD"
+        "id": "1",
+        "title": "Pinot Noir",
+        "image": "img/pinot-noir.jpg",
+        "description": "Pinot Noir",
+        "price": 12.00
     },
     {
-        "id" : "2",
-        "image" : "riesling.jpg",
-        "href" :  "riesling.html"
-        "title" : "Riesling",
-        "price" : "$16,00USD"
+        "id": "2",
+        "title": "Pinot Noir",
+        "image": "img/pinot-noir.jpg",
+        "description": "Pinot Noir",
+        "price": 49.99
     },
     {
-        "id" : "3",
-        "image" : "zifandel.jpg",
-        "href" :  "zifandel.html"
-        "title" : "Zifandel",
-        "price" : "$19,00USD"
+        "id": "3",
+        "title": "Pinot Noir",
+        "image": "img/pinot-noir.jpg",
+        "description": "Pinot Noir",
+        "price": 49.99
     },
     {
-        "id" : "4",
-        "image" : "soave.jpg",
-        "href" :  "soave.html"
-        "title" : "Soave",
-        "price" : "$14,00USD"
-    },
-]
-`;
-
-function renderProducts(products) {
-    const productwContainer = document.querySelector('.product-content');
-    let html = '';
-    for (const product of products) {
-        html += `
-                <section class="card-text">
-                    <img src="img/${product.image}" alt="${product.title}">
-                    <a href="wine/${product.href}">${product.title}"</a>
-                    <p>${product.price}</p>
-                    <button class="button">Shop Now</button>
-                </section>
-           
-`
+        "id": "4",
+        "title": "Pinot Noir",
+        "image": "img/pinot-noir.jpg",
+        "description": "Pinot Noir",
+        "price": 49.99
     }
-    productwContainer.innerHTML = html;
+    
+]`;
+
+function renderProducts(products, sortOrder) {
+    const sortedProducts = [...products]
+        .sort((a, b) => sortOrder === 'ascending'
+            ? a.price - b.price
+            : b.price - a.price);
+    const productsContainer = document.querySelector('.product-content');
+    let html = '';
+    for (const product of sortedProducts) {
+        html += `<article class="product">
+                    <img src="${product.image}" alt="${product.title}">
+                    <h3>${product.title}</h3>
+                    <p>${product.description}</p>
+                      <p>${product.price}</p>
+                      <button class="button">Shop Now</button>
+                                    </article>`;
+    }
+    productsContainer.innerHTML = html;
 }
-renderProducts(JSON.parse(productsWine));
+
+renderProducts(JSON.parse(productsJson), 'ascending');
+
+const buttonSortAscending = document.querySelector('.sort-ascending');
+const buttonSortDescending = document.querySelector('.sort-descending');
+
+buttonSortAscending.addEventListener('click', sortAscending);
+buttonSortDescending.addEventListener('click', sortDescending);
+
+function sortAscending() {
+    renderProducts(JSON.parse(productsJson), 'ascending');
+}
+
+function sortDescending() {
+    renderProducts(JSON.parse(productsJson), 'descending');
+}

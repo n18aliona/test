@@ -8,6 +8,7 @@
 :root {
     --main-color: #261e1c;
     --accent-color: #1a1512;
+    --orange-color: #c8693a;
 }
 
 body {
@@ -30,12 +31,13 @@ body {
     font-weight: 500;
 }
 
-#carousel-wine>div>div>img {
-    max-width: 500px;
+
+
+.products-carousel .small-img {
+    max-width: 80px;
 }
 
-
-#carousel-wine {
+.products-carousel img {
     max-width: 413.8px;
 }
 
@@ -129,4 +131,25 @@ body>div>div>div.fstsection.col-12.col-sm-12.col-md-6.col-lg-6>img {
 hr {
     color: #c8693a;
 
+} 
+.button {
+    padding: 0px;
+    margin: 0 0.3em 0.3em 0;
+    color: #FFFFFF;
+    text-decoration: none;
+    text-align: center;
+    transition: color 0.7s;
+    background-color: var(--orange-color);
+    font-size: 15px;
+    font-weight: 400;
+    border-color: #c8693a;
+
+}
+
+.button:hover {
+    color: #af5112;
+    background-color: #af5112;
+    cursor: pointer;
+    border-color: #af5112;
+    color: #FFFFFF;
 }

@@ -1,8 +1,10 @@
 const images = [
-    "img/pinot-noir.jpg",
-    "img/noir.jpg"
+    "image/pinot-noir.jpg",
+    "image/noir.jpg"
 ]
+
 let currentSlide = 0;
+
 
 function showSlide() {
     const carouselImage = document.querySelector('.products-carousel img');
@@ -21,7 +23,6 @@ function prevSlide() {
     showSlide();
 }
 
-setInterval(nextSlide, 3000);
+setInterval(nextSlide, 2000);
 
-document.querySelector('.carousel-prev').addEventListener('click', prevSlide);
-document.querySelector('.carousel-next').addEventListener('click', nextSlide);
+
