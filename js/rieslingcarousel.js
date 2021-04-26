@@ -1,6 +1,6 @@
 const images = [
-    "image/pinot-noir.jpg",
-    "image/noir.jpg"
+    "image/riesling.jpg",
+    "image/riesl.jpg"
 ]
 
 let currentSlide = 0;
@@ -25,6 +25,4 @@ function prevSlide() {
 
 setInterval(nextSlide, 2000);
 
-
-
-
+showSlide();

@@ -29,6 +29,7 @@ body {
     font-family: 'Rubik', sans-serif;
     font-size: 16px;
     font-weight: 500;
+    
 }
 
 
@@ -40,7 +41,12 @@ body {
 .products-carousel img {
     max-width: 413.8px;
 }
-
+.wine-infomation,
+.products-carousel
+{
+    padding-bottom: 95px;
+    
+}
 
 footer {
     color: white;
